@@ -19,7 +19,7 @@ func PatchDiscord(discordPath *string, iconsPath *string) {
 
 	extractDiscord(discordPath)
 
-	log.Println("Renaming Discord to Bunny")
+	log.Println("Renaming Discord to Revenge")
 	if err := patchName(); err != nil {
 		log.Fatalln(err)
 	}
@@ -167,8 +167,8 @@ func patchName() error {
 		return err
 	}
 
-	info["CFBundleName"] = "Bunny"
-	info["CFBundleDisplayName"] = "Bunny"
+	info["CFBundleName"] = "Revenge"
+	info["CFBundleDisplayName"] = "Revenge"
 
 	err = savePlist(&info)
 	return err
